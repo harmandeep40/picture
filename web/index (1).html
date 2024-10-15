@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Picture This!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="title">
+      <h1>Picture This!</h1>
+      <h4>My Really Cool Blog Post</h4>
+    </div>
+    <img src="images/museum.jpg" alt="placeholder" 
+    srcset="
+    images/museum.jpg 320w,
+    images/museum.jpg 480w,
+    images/museum.jpg 720w,
+    images/museum.jpg 960w
+  "
+  sizes="(max-width: 960px) 100vw, 50vw">
+
+  </header>
+</body>
+<style>
+    body {
+  margin: 0;
+  border: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  background-color: cadetblue;
+}
+
+.title {
+  padding: 50px 25px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+h4 {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+@media (min-width: 960px) {
+  .header {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+</style>
+
+</html>
